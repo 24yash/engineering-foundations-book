@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A growing book of engineering foundations, built from daily learning notes.">
+  <title>Engineering Foundations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-button" id="menu-button" aria-label="Open chapters" aria-expanded="false">☰</button>
+    <a class="wordmark" href="#home">Engineering Foundations</a>
+    <button class="theme-button" id="theme-button" aria-label="Change colour theme">◐</button>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-heading">
+        <span class="eyebrow">Your field notes</span>
+        <strong>Contents</strong>
+      </div>
+      <label class="search">
+        <span class="sr-only">Search the book</span>
+        <input id="search" type="search" placeholder="Search notes…" autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <nav id="contents" aria-label="Book chapters"></nav>
+      <p class="sidebar-footnote">Built one useful question at a time.</p>
+    </aside>
+
+    <main id="main" tabindex="-1"></main>
+  </div>
+
+  <template id="home-template">
+    <article class="home-page">
+      <div class="hero-copy">
+        <span class="eyebrow">A living revision book</span>
+        <h1>Learn it.<br>Question it.<br>Keep it.</h1>
+        <p class="lede">Short, practical notes from the Engineering Foundations lab—written for the version of you who comes back to revise.</p>
+        <a class="primary-link" id="start-reading" href="#">Start reading <span>→</span></a>
+      </div>
+      <div class="book-cover" aria-hidden="true">
+        <div class="cover-rule"></div>
+        <p>ENGINEERING<br>FOUNDATIONS</p>
+        <span>FIELD NOTES · VOL. 01</span>
+        <div class="cover-mark">EF</div>
+      </div>
+      <section class="home-stats" aria-label="Book statistics">
+        <div><strong id="chapter-count">0</strong><span>chapters</span></div>
+        <div><strong id="topic-count">0</strong><span>topics</span></div>
+        <div><strong>∞</strong><span>questions left</span></div>
+      </section>
+    </article>
+  </template>
+
+  <script src="chapters.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
